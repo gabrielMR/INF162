@@ -11,17 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/empleado',"EmpleadoController@getIndex");
-Route::get('/regi', "RegistrarController@getindex");
-Route::post('/regi', "RegistrarController@postindex");
+/*login XD*/
+Route::get('/',"Auth\AuthController@getLogin");
+Route::post('/',"Auth\AuthController@postLogin");
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+/*login xd end*/
+/*por favor no se rian de mis comentarios*/
+
+
+Route::get('/empleado',"EmpleadoController@getIndex");
+Route::get('/regi', "RegistrarController@getindex");
+Route::post('/regi', "RegistrarController@postindex");

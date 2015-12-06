@@ -1,9 +1,10 @@
         <section id="main-content">
           <section class="wrapper">
               <div class="row">
-              
+              <div class="col-lg-3 col-md-6 col-sm-4 mb">
+              </div>
                   <div class="col-lg-9 main-chart">
-                  	<div class="col-lg-12 col-md-4 col-sm-4 mb">
+                  	<div class="col-lg-3 col-md-4 col-sm-4 mb pull-right">
                       <div class="weather-3 pn centered">
                         <i class="fa fa-flag"></i>
                         <h1>
@@ -21,22 +22,14 @@
                         </div>
                       </div>
                     </div>
-                     <h4><i class="fa fa-angle-right"></i> Registrar</h4>
-            <button type="button" class="btn btn-primary btn-lg btn-block " onclick="">Registro</button>
-	     			     	</div>
-
               </div>
-              
           </section>
         </section>
         <script type="text/javascript">
-        
          function time()
           {
-              //document.getElementById("segundos").innerHTML
               var times='<?php echo (date("h")+8).":".date("i").":".date("s");?>';
               var sep=times.split(':');
-
               var contador_s =parseInt(sep[2]);
               var contador_m =parseInt(sep[1]);
               var contador_h =parseInt(sep[0]);
@@ -53,7 +46,6 @@
                       if (contador_m==60) {
                         contador_m=0;
                         contador_h++;
-
                       }
                       if (contador_h==24) {
                         contador_h=0;

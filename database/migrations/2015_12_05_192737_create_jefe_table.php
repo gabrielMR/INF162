@@ -18,7 +18,6 @@ class CreateJefeTable extends Migration
                   ->references('id')
                   ->on('persona')
                   ->onDelete('cascade');
-        
         });
     }
 

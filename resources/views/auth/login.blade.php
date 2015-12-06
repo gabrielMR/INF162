@@ -11,9 +11,6 @@
     <link href="{{asset('assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/style-responsive.css')}}" rel="stylesheet">
-    <style type="text/css">
-    .form-login-heading{
-    }
     </style>
   </head>
   <body>
@@ -30,18 +27,15 @@
                     </label>
                     <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> ENTRAR</button>
                     <hr>
-                    
-                    
                 </div>
-                
               </form>       
         </div>
       </div>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/jquery.backstretch.min.js')}}"></script>
     <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+        $.backstretch("{{asset('assets/img/login-bg.jpg')}}", {speed: 500});
     </script>
   </body>
 </html>

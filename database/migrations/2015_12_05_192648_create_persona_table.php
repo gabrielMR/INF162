@@ -20,6 +20,8 @@ class CreatePersonaTable extends Migration
             $table->string('tipo')->nullable();
             $table->string('email')->nullable();
             $table->string('password', 60)->nullable();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
