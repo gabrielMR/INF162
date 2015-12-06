@@ -15,15 +15,16 @@ class RegistrarController extends Controller
      public function postindex(Request $request){
         $id_cod=$request->input('id_cod');
         $hora=$request->input('hora');
+        $per=Personal::where('id',$id_cod)->first();
+        if ($per) {
         $id=DB::table("horario")->insertGetId(array(
-			'hora'  => $hora));
-
-        $ti= new Tiene();
-        $ti->id_ef=$id;
-        $ti->save();
-
-		
-		
-        return response()->json(array('msg' =>"da"));
+            'hora'  => $hora));
+        DB::table("tiene")->insertGetId(array(
+            'id_ef'  => $id_cod,
+            'id_horaf'=>$id));
+        return response()->json(array('msg' =>"<h1>".$per->nombre." Registrado exitosamente</h1>"));
+       }else{
+        return response()->json(array('msg' =>"<h1>No existe el codigo ".$id_cod."</h1>"));
+       }
     }
 }

@@ -6,6 +6,15 @@ class UserTableSeeder extends Seeder{
 	public function run()
 	{
 		$faker=Faker::create();
+		for ($i=0; $i < 15; $i++) { 
+
+			DB::table("users")->insertGetId(array(
+			'name'  => $faker->firstName.' '.$faker->lastName,
+			'email' => $faker->unique()->email(),
+			'password' => \Hash::make('123456'),
+			
+			));	
+		}
 		for ($i=0; $i < 5; $i++) { 
 
 			$id=DB::table("persona")->insertGetId(array(
