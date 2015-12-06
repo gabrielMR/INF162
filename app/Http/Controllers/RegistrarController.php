@@ -10,18 +10,22 @@ use DB;
 class RegistrarController extends Controller
 {
     public function getindex(){
-        return view('reg');
+        $head=view('head1');
+        return view('reg')->with('head',$head);
     }
      public function postindex(Request $request){
         $id_cod=$request->input('id_cod');
         $hora=$request->input('hora');
         $per=Personal::where('id',$id_cod)->first();
         if ($per) {
-        $id=DB::table("horario")->insertGetId(array(
+        $id=DB::table("hora")->insertGetId(array(
             'hora'  => $hora));
-        DB::table("tiene")->insertGetId(array(
-            'id_ef'  => $id_cod,
-            'id_horaf'=>$id));
+        DB::table("registra")->insertGetId(array(
+            'id_e'  => $id_cod,
+            'id_hor'=>$id,
+            'fecha_ac'=>date('y-m-d')
+            )
+        );
         return response()->json(array('msg' =>"<h1>".$per->nombre." Registrado exitosamente</h1>"));
        }else{
         return response()->json(array('msg' =>"<h1>No existe el codigo ".$id_cod."</h1>"));

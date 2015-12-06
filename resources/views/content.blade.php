@@ -1,10 +1,10 @@
         <section id="main-content">
           <section class="wrapper">
               <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-4 mb">
+              <div id="c" class="col-lg-7 main-chart">
               </div>
-                  <div class="col-lg-9 main-chart">
-                  	<div class="col-lg-3 col-md-4 col-sm-4 mb pull-right">
+                  <div class="col-lg-5 main-chart">
+                  	<div class="col-lg-5 col-md-4 col-sm-4 mb pull-right">
                       <div class="weather-3 pn centered">
                         <i class="fa fa-flag"></i>
                         <h1>

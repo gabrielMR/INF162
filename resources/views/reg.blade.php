@@ -12,13 +12,17 @@
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/style-responsive.css')}}" rel="stylesheet">
   </head>
+  <style type="text/css">
+ 
+  </style>
   <body onload="getTime()">
+  <?php echo $head;?>
 	  	<div class="container">
 	  		<div id="showtime"></div>
 	  			<div class="col-lg-4 col-lg-offset-4">
 	  				<div class="lock-screen">
 		  				<h2><a data-toggle="modal" href="#myModal"><i class="fa fa-flag"></i></a></h2>
-		  				<p>Presione para ingresar codigo</p>
+		  				<h4>Presione para ingresar codigo del empleado</h4>
                         <div id="res"></div>
 				          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 				              <div class="modal-dialog">
@@ -44,7 +48,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+        $.backstretch("assets/img/images.jpg", {speed: 500});
     </script>
     <script>
         function getTime()

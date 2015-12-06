@@ -15,8 +15,17 @@ class CreateTieneTable extends Migration
         Schema::create('tiene', function (Blueprint $table) {
             $table->increments('id_ti');
 
-            $table->integer('id_ef')->nullable();
-            $table->integer('id_horaf')->nullable();
+            $table->integer('id_ef')->unsigned()->nullable();
+            $table->foreign('id_ef')
+                  ->references('id')
+                  ->on('persona')
+                  ->onDelete('cascade'); 
+            $table->integer('id_horaf')->unsigned()->nullable();
+            $table->foreign('id_horaf')
+                  ->references('id_hora')
+                  ->on('horario')
+                  ->onDelete('cascade'); 
+
 
         });
     }

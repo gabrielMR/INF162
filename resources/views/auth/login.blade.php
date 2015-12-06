@@ -17,7 +17,7 @@
       <div id="login-page">
         <div class="container">
               <form method="POST" class="form-login"  action="/auth/login">
-                <h2 class="form-login-heading">sign in now</h2>
+                <h2 class="form-login-heading">Ingrese sus datos</h2>
                 <div class="login-wrap">
                     <input name="email" class="form-control" placeholder="Usuario" autofocus name="email">
                     <br>
@@ -35,7 +35,7 @@
     <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/jquery.backstretch.min.js')}}"></script>
     <script>
-        $.backstretch("{{asset('assets/img/login-bg.jpg')}}", {speed: 500});
+        $.backstretch("{{asset('assets/img/img.jpeg')}}", {speed: 500});
     </script>
   </body>
 </html>

@@ -30,3 +30,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('/empleado',"EmpleadoController@getIndex");
 Route::get('/regi', "RegistrarController@getindex");
 Route::post('/regi', "RegistrarController@postindex");
+
+Route::get('/cargar/{fe}', "CambiarController@cambio");
+Route::get('/cargar1/{mes}', "CambiarController@cambio1");
+
